@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Explode Your Minds</title>
+<script type="text/javascript" src="jQuery.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133197154-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-133197154-3');
+</script>
+</head>
+<body>
+<style>
+textarea,#editor{
+	height: 37vw;
+	font-size: 1.1vw;
+	width: 98vw;
+	display: inline-block;
+}
+.loader{
+	display: none;
+}
+.explained_line{display: inline-block;padding: 1vw;margin: 0;background: linear-gradient(to right,#172631 25%,#2370ad);color: #fff;width: 37vw;border: 0.1vw solid #ad5353;position: sticky;border-radius: 1vw 0.3vw 0.3vw 1vw;}
+.explained_line:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 1.8vw;
+	border: 1vw solid;
+	border-color: transparent transparent #324556 #324556;
+	right: -2.1vw;
+}
+.explained_line,.bubble {
+    vertical-align: middle;
+}
+.bubble{display: inline-block;float: right;margin: 0 1vw 0 0;padding: 1vw;border-radius: 0.3vw 1vw 1vw 0.3vw;position: sticky;width: 50vw;background: linear-gradient(to right,#2370ad,#6b2786);color: #fff;border: 0.1vw solid #ad5353;}
+
+.explained {
+    font-size: 1.4vw;
+    font-family: cursive;
+    margin: 0.7vw 0;
+    display: flow-root;
+}
+button{
+    width: 18vw;
+    margin: 3vw auto;
+    height: 4vw;
+    font-size: 3vw;
+    border: solid 0.1vw #333;
+    background: #0e4473;
+    border-radius: 5vw;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+}
+.convertit, button,#converted{
+}
+body{
+	background: #023;
+	margin: 0;
+}
+button:focus {
+    outline: none;
+}
+.hide{
+	display: none;
+}
+</style>
+<div class="container">
+	<div>
+		<div id="editor"class="convertit"></div>
+		<button onclick="Convert()">Visualize</button>
+		<textarea id="converted" style="display: none"></textarea>
+	</div>
+	<dir id="visual">
+		
+	</dir>
+</div>
+<script src="beautify.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="ace/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="index.js"></script>
+<style type="text/css">
+.tri-right.left-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 1.8vw;
+	border: 1vw solid;
+	border-color: transparent #324556 #324556 transparent;
+	left: -2.1vw;
+}
+</style>
+</body>
+</html>
